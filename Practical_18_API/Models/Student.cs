@@ -20,7 +20,7 @@ namespace Practical_18_API.Models
 		public string PhoneNumber { get; set; }
 
 		[Required]
-		[StringLength(20)]
+		[StringLength(256)]
 		[DataType(DataType.EmailAddress)]
 		public string Email { get; set; }
 

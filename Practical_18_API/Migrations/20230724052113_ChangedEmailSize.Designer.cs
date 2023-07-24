@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Practical_18_API.Data;
 
@@ -10,9 +11,11 @@ using Practical_18_API.Data;
 namespace Practical_18_API.Migrations
 {
     [DbContext(typeof(DatabaseContextClass))]
-    partial class DatabaseContextClassModelSnapshot : ModelSnapshot
+    [Migration("20230724052113_ChangedEmailSize")]
+    partial class ChangedEmailSize
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

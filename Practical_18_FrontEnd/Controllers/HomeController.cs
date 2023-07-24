@@ -16,6 +16,7 @@ namespace Practical_18_FrontEnd.Controllers
 			_httpClient = httpClient;
 		}
 
+
 		public async Task<IActionResult> Index()
 		{
 			var response = await _httpClient.GetAsync("https://localhost:7067/api/Student");
@@ -149,6 +150,8 @@ namespace Practical_18_FrontEnd.Controllers
 				StudentViewModel student = ConvertToStudentViewModelFromResponse(await result.Content.ReadAsStringAsync());
 				return View(student);
 			}
+
+
 
 			return NotFound();
 		}
